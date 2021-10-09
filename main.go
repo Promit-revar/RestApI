@@ -51,11 +51,11 @@ type User struct{
 	Password  string  `json:"pass" bson:"password"`                   // password filled that has to be hashed and salted before storing
 }
 type Post struct{
-	UserID       string  `json:"uid" bson:"uid"`           
-	ID           string  `json:"id" bson:"id"`
-	Caption      string  `json:"caption" bson:"caption"`
-	ImgUrl       string  `json:"url" bson:"url"`
-	PostTime     time.Time `json:"posttime" bson:"posttime"`
+	UserID       string  `json:"uid" bson:"uid"`                      // User id who is posting..
+	ID           string  `json:"id" bson:"id"`                        // Post id for  particular post...
+	Caption      string  `json:"caption" bson:"caption"`             // caption for the post
+	ImgUrl       string  `json:"url" bson:"url"`                     // Url of the image posted
+	PostTime     time.Time `json:"posttime" bson:"posttime"`         // Time stamp when it is posted
 }
 
 
