@@ -24,7 +24,7 @@ func main() {
 var client *mongo.Client
 func connect() {
 
-	clientOptions := options.Client().ApplyURI("mongodb+srv://Promit_Revar:CaptainZaltan@cluster0.oxi5g.mongodb.net/Go_task?retryWrites=true&w=majority")
+	clientOptions := options.Client().ApplyURI("mongodb+srv://Promit_Revar:*******@cluster0.oxi5g.mongodb.net/Go_task?retryWrites=true&w=majority")
 	client, _ = mongo.NewClient(clientOptions)
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
@@ -76,8 +76,8 @@ func handleRequest() {
 	}
 }
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello Promit!")
-	
+	fmt.Fprintf(w, "<h1>Welcome to instagram backend API !</h1><br><h4>Created By:- Pormit Revar using GoLang!!</h4>")
+	fmt.Fprintf(w, "<br><h4>Routes</h4><br>/users<br>/users/{id}<br>/posts<br>/posts/{id}<br>/posts/users/{user id}")
 }
 
 
